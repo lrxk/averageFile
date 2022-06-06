@@ -33,3 +33,8 @@ def print_some_math(file_size_that_match_the_extension,file_that_match_the_exten
     max_size=np.min(file_size_that_match_the_extension)
     print("Biggest file : name: {} size={}".format(file_that_match_the_extension[indMax],max_size))
     print("Smallest file : name: {} size={}".format(file_that_match_the_extension[indMin],min_size))
+
+if __name__=="__main__":
+    arguments=args()
+    file_that_match_the_extension,file_size_that_match_the_extension,=get_files_and_their_sizes(arguments)
+    print_some_math(file_size_that_match_the_extension,file_that_match_the_extension,arguments)
